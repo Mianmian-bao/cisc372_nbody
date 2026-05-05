@@ -60,7 +60,7 @@ __global__ void sum_and_update(vector3* accels, vector3* pos, vector3* vel, int 
 //Parameters: None
 //Returns: None
 //Side Effect: Modifies the hPos and hVel arrays with the new positions and accelerations after 1 INTERVAL
-void compute() {
+extern "C" void compute() {
     int n = NUMENTITIES;
 
     vector3 *d_pos, *d_vel, *d_accels;
